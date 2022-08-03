@@ -6,6 +6,10 @@ const app = express();
 app.use(express.json())
 
 port = process.env.PORT || 5000;
+
+app.get("/",(req,res)=>{
+  res.send("hello kundali app developer");
+})
 //  create users
 app.post("/users", async(req, res) => {
   console.log(req.body);
