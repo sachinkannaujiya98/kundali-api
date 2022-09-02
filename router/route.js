@@ -22,6 +22,7 @@ router.post("/product", async (req, res) => {
         return res.json({ error: "please fill the data" })
     }
     const orderData = new Product({ ...req.body });
+    console.log(req.body)
     const insertUser = await orderData.save();
     return res.status(201).json(insertUser);
 });

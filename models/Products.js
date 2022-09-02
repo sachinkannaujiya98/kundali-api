@@ -14,7 +14,7 @@ const product = new mongoose.Schema({
         type: String,
         required: true
     },
-    gender: {
+    age: {
         type: Number,
         required: true
     },
@@ -31,12 +31,12 @@ const product = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: [true, "Email is already exists"],
-        validate() {
-            if (!validator.isEmail(value)) {
-                throw new Error("invalid Email");
-            }
-        },
+        // unique: [true, "Email is already exists"],
+        // validate() {
+        //     if (!validator.isEmail(value)) {
+        //         throw new Error("invalid Email");
+        //     }
+        // },
     },
     mobile_no: {
         type: Number,
